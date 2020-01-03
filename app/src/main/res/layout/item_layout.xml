@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="film"
+                type="com.studio.yami.ajpfinal.data.local.Favorite" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_margin="6dp"
+            android:tag="film"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:poster="@{film.poster}"
+                    tools:ignore="ContentDescription" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBG"
+                    android:padding="2dp">
+
+                <TextView
+                        style="@style/item_style"
+                        android:drawableStart="@drawable/ic_star_border"
+                        android:text="@{film.score}"
+                        tools:ignore="SmallSp" />
+
+                <TextView
+                        style="@style/item_style"
+                        android:layout_alignParentEnd="true"
+                        android:drawableStart="@drawable/ic_language"
+                        android:text="@{film.language}"
+                        android:textAllCaps="true"/>
+
+            </RelativeLayout>
+
+            <TextView
+                    android:id="@+id/tv_title_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorBG"
+                    android:fontFamily="@font/merriweather_bold"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="@{film.title}"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

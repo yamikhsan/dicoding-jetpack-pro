@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AJP Final</string>
+
+    <string name="overview">Overview</string>
+    <string name="info">Info</string>
+    <string name="status">Status</string>
+    <string name="score">Score</string>
+    <string name="duration">Duration</string>
+    <string name="language">Language</string>
+    <string name="movie">Movie</string>
+    <string name="tv">Tv Show</string>
+    <string name="favorite">Favorite</string>
+
+</resources>
